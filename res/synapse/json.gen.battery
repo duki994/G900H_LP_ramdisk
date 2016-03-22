@@ -34,14 +34,14 @@ cat << CTAG
 	}},
 	{ SSeekBar:{
 		title:"AC/Mains Input Current",
-		min:300, max:1350, unit:"mA", step:50,
+		min:300, max:1600, unit:"mA", step:50,
 		default:`cat /sys/bus/platform/drivers/sec-battery/battery.28/ac_input`,
                 action:"generic /sys/bus/platform/drivers/sec-battery/battery.28/ac_input"
 	}},
 	{ SSeekBar:{
 		title:"AC/Mains Charge Current",
 		description:"AC or mains charge current supplied to battery during charging.",
-		min:300, max:1350, unit:"mA", step:50,
+		min:300, max:1600, unit:"mA", step:50,
 		default:`cat /sys/bus/platform/drivers/sec-battery/battery.28/ac_charge`,
                 action:"generic /sys/bus/platform/drivers/sec-battery/battery.28/ac_charge"
 	}},
@@ -54,14 +54,14 @@ cat << CTAG
 	}},
 	{ SSeekBar:{
 		title:"SDP Input Current",
-		min:300, max:1350, unit:"mA", step:25,
+		min:300, max:1600, unit:"mA", step:25,
 		default:`cat /sys/bus/platform/drivers/sec-battery/battery.28/sdp_input`,
                 action:"generic /sys/bus/platform/drivers/sec-battery/battery.28/sdp_input"
 	}},
 	{ SSeekBar:{
 		title:"SDP Charge Current",
 		description:"NOTE: SDP charge limit serves as a global minima for ALL charge currents except MHL currents, overriding their respective value if they are inferior!",
-		min:300, max:1350, unit:"mA", step:25,
+		min:300, max:1600, unit:"mA", step:25,
 		default:`cat /sys/bus/platform/drivers/sec-battery/battery.28/sdp_charge`,
                 action:"generic /sys/bus/platform/drivers/sec-battery/battery.28/sdp_charge"
 	}},
@@ -71,13 +71,13 @@ cat << CTAG
 	}},
 	{ SSeekBar:{
 		title:"DCP Input Current",
-		min:300, max:1350, unit:"mA", step:50,
+		min:300, max:1600, unit:"mA", step:50,
 		default:`cat /sys/bus/platform/drivers/sec-battery/battery.28/dcp_input`,
                 action:"generic /sys/bus/platform/drivers/sec-battery/battery.28/dcp_input"
 	}},
 	{ SSeekBar:{
 		title:"DCP Charge Current",
-		min:300, max:1350, unit:"mA", step:50,
+		min:300, max:1600, unit:"mA", step:50,
 		default:`cat /sys/bus/platform/drivers/sec-battery/battery.28/dcp_charge`,
                 action:"generic /sys/bus/platform/drivers/sec-battery/battery.28/dcp_charge"
 	}},
@@ -87,13 +87,13 @@ cat << CTAG
 	}},
 	{ SSeekBar:{
 		title:"CDP Input Current",
-		min:300, max:1350, unit:"mA", step:50,
+		min:300, max:1600, unit:"mA", step:50,
 		default:`cat /sys/bus/platform/drivers/sec-battery/battery.28/cdp_input`,
                 action:"generic /sys/bus/platform/drivers/sec-battery/battery.28/cdp_input"
 	}},
 	{ SSeekBar:{
 		title:"CDP Charge Current",
-		min:300, max:1350, unit:"mA", step:50,
+		min:300, max:1600, unit:"mA", step:50,
 		default:`cat /sys/bus/platform/drivers/sec-battery/battery.28/cdp_charge`,
                 action:"generic /sys/bus/platform/drivers/sec-battery/battery.28/cdp_charge"
 	}},
@@ -103,13 +103,13 @@ cat << CTAG
 	}},
 	{ SSeekBar:{
 		title:"ACA Input Current",
-		min:100, max:1000, unit:"mA", step:25,
+		min:100, max:1600, unit:"mA", step:25,
 		default:`cat /sys/bus/platform/drivers/sec-battery/battery.28/aca_input`,
                 action:"generic /sys/bus/platform/drivers/sec-battery/battery.28/aca_input"
 	}},
 	{ SSeekBar:{
 		title:"ACA Charge Current",
-		min:100, max:1000, unit:"mA", step:25,
+		min:100, max:1600, unit:"mA", step:25,
 		default:`cat /sys/bus/platform/drivers/sec-battery/battery.28/aca_charge`,
                 action:"generic /sys/bus/platform/drivers/sec-battery/battery.28/aca_charge"
 	}},
@@ -119,13 +119,13 @@ cat << CTAG
 	}},
 	{ SSeekBar:{
 		title:"Misc Input Current",
-		min:100, max:1350, unit:"mA", step:50,
+		min:100, max:1600, unit:"mA", step:50,
 		default:`cat /sys/bus/platform/drivers/sec-battery/battery.28/so_limit_input`,
                 action:"generic /sys/bus/platform/drivers/sec-battery/battery.28/so_limit_input"
 	}},
 	{ SSeekBar:{
 		title:"Misc Charge Current",
-		min:100, max:1350, unit:"mA", step:50,
+		min:100, max:1600, unit:"mA", step:50,
 		default:`cat /sys/bus/platform/drivers/sec-battery/battery.28/so_limit_charge`,
                 action:"generic /sys/bus/platform/drivers/sec-battery/battery.28/so_limit_charge"
 	}},
