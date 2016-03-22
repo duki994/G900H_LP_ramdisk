@@ -38,7 +38,7 @@ case "$1" in
 		echo "Core 4: $CPU4@nCore 5: $CPU5@nCore 6: $CPU6@nCore 7: $CPU7";
 	;;
 	LiveBatteryTemperature)
-		BAT_C=`awk '{ print $1 / 10 }' /sys/devices/battery.26/power_supply/battery/batt_temp`;
+		BAT_C=`awk '{ print $1 / 10 }' /sys/devices/battery.28/power_supply/battery/batt_temp`;
 		BAT_F=`awk "BEGIN { print ( ($BAT_C * 1.8) + 32 ) }"`;
 		BAT_H=`cat /sys/devices/battery.28/power_supply/battery/health`;
 
