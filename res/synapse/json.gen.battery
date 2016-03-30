@@ -34,14 +34,14 @@ cat << CTAG
 	}},
 	{ SSeekBar:{
 		title:"AC/Mains Input Current",
-		min:300, max:1600, unit:"mA", step:50,
+		min:300, max:2000, unit:"mA", step:50,
 		default:`cat /sys/bus/platform/drivers/sec-battery/battery.28/ac_input`,
                 action:"generic /sys/bus/platform/drivers/sec-battery/battery.28/ac_input"
 	}},
 	{ SSeekBar:{
 		title:"AC/Mains Charge Current",
 		description:"AC or mains charge current supplied to battery during charging.",
-		min:300, max:1600, unit:"mA", step:50,
+		min:300, max:2000, unit:"mA", step:50,
 		default:`cat /sys/bus/platform/drivers/sec-battery/battery.28/ac_charge`,
                 action:"generic /sys/bus/platform/drivers/sec-battery/battery.28/ac_charge"
 	}},
@@ -125,7 +125,7 @@ cat << CTAG
 	}},
 	{ SSeekBar:{
 		title:"Misc Charge Current",
-		min:100, max:1600, unit:"mA", step:50,
+		min:100, max:2000, unit:"mA", step:50,
 		default:`cat /sys/bus/platform/drivers/sec-battery/battery.28/so_limit_charge`,
                 action:"generic /sys/bus/platform/drivers/sec-battery/battery.28/so_limit_charge"
 	}},

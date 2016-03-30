@@ -37,6 +37,11 @@ case "$1" in
 		
 		echo "Core 4: $CPU4@nCore 5: $CPU5@nCore 6: $CPU6@nCore 7: $CPU7";
 	;;
+	LiveGPUFrequency)
+		GPU=`cat /sys/devices/11800000.mali/clock 2> /dev/null`;
+		
+		echo "GPU freq: $GPU";
+	;;
 	LiveBatteryTemperature)
 		BAT_C=`awk '{ print $1 / 10 }' /sys/devices/battery.28/power_supply/battery/batt_temp`;
 		BAT_F=`awk "BEGIN { print ( ($BAT_C * 1.8) + 32 ) }"`;
