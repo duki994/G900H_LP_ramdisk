@@ -1,5 +1,16 @@
 #!/sbin/busybox sh
 
+bool() {
+  [ `cat $1` == "Y" ] && echo "1";
+  [ `cat $1` == "N" ] && echo "0";
+}
+
+# reverse boolean logic for wakelock control
+notbool() {
+  [ `cat $1` == "Y" ] && echo "0";
+  [ `cat $1` == "N" ] && echo "1";
+}
+
 cat << CTAG
 
 {
@@ -16,4 +27,3 @@ cat << CTAG
     ]
 }
 CTAG
-
