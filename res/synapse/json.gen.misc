@@ -52,7 +52,7 @@ echo 		'{ SPane:{
 		{ SCheckBox:{
 		   	title:"ON/OFF PE workqueues",
 		   	default:'$PE',
-		   	action:"boolean /sys/module/mmc_core/parameters/use_spi_crc"
+		   	action:"boolean /sys/module/workqueue/parameters/power_efficient"
 		}},
 		{ SPane:{ 
 			title:"Wakelock control",
@@ -89,6 +89,14 @@ for TCPCC in \`cat /proc/sys/net/ipv4/tcp_available_congestion_control\` ; do
 done;
 `
 			]
+		}},
+		{ SPane:{ 
+			title:"SELinux permissive/enforcing control",
+			description:"Checked box == enforcing, unchecked box == permissive"
+		}},
+		{ SCheckBox:{
+		   	default:`cat /sys/fs/selinux/enforce`,
+		   	action:"generic /sys/fs/selinux/enforce"
 		}},
 	]
 }
