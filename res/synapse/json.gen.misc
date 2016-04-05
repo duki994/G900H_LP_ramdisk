@@ -98,5 +98,13 @@ done;
 		   	default:`cat /sys/fs/selinux/enforce`,
 		   	action:"generic /sys/fs/selinux/enforce"
 		}},
+		{ SPane:{ 
+			title:"Enable Adaptive LMK",
+			description:"When memory pressure is high, LMK will kill apps even if there is enough RAM because of high RAM pressure. Adaptive LMK is good for multitasking and heavy taskloads."
+		}},
+		{ SCheckBox:{
+		   	default:`cat /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk`,
+		   	action:"generic /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk"
+		}},
 	]
 }
