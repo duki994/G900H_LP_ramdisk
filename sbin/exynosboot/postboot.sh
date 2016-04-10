@@ -60,8 +60,8 @@ $BB echo "medium" > /sys/kernel/mm/uksm/cpu_governor
 ########################
 
 
-### Set I/O deadline ###
-$BB echo "deadline" > /sys/block/mmcblk0/queue/scheduler
+### Set I/O row ###
+$BB echo "row" > /sys/block/mmcblk0/queue/scheduler
 $BB echo "1024" > /sys/block/mmcblk0/bdi/read_ahead_kb
 $BB echo "2" >  /sys/block/mmcblk0/queue/nomerges
 

@@ -47,38 +47,38 @@ cat << CTAG
 		description:"Wolfson hardware equalizer controls for headphones"
 	}},
 	{ SCheckBox:{
-		description:"Switch heaphone hardware equalizer ON/OFF",
+		description:"Switch heaphone hardware equalizer ON/OFF. Normal starting gain is 12dB.",
 		label:"Headphone EQ ON/OFF",
 		default:`cat /sys/class/misc/wolfson_control/switch_eq_headphone`,
                 action:"generic /sys/class/misc/wolfson_control/switch_eq_headphone"
 	}},
 	{ SSeekBar:{
 		title:"Headphone Band 1 gain",
-		min:-12, max:12, unit:"dB",
+		min:0, max:24, unit:"dB",
 		default:`cat /sys/class/misc/wolfson_control/eq_hp_gain_1`,
 		action:"generic /sys/class/misc/wolfson_control/eq_hp_gain_1"
 	}},
 	{ SSeekBar:{
 		title:"Headphone Band 2 gain",
-		min:-12, max:12, unit:"dB",
+		min:0, max:24, unit:"dB",
 		default:`cat /sys/class/misc/wolfson_control/eq_hp_gain_2`,
 		action:"generic /sys/class/misc/wolfson_control/eq_hp_gain_2"
 	}},
 	{ SSeekBar:{
 		title:"Headphone Band 3 gain",
-		min:-12, max:12, unit:"dB",
+		min:0, max:24, unit:"dB",
 		default:`cat /sys/class/misc/wolfson_control/eq_hp_gain_3`,
 		action:"generic /sys/class/misc/wolfson_control/eq_hp_gain_3"
 	}},
 	{ SSeekBar:{
 		title:"Headphone Band 4 gain",
-		min:-12, max:12, unit:"dB",
+		min:0, max:24, unit:"dB",
 		default:`cat /sys/class/misc/wolfson_control/eq_hp_gain_4`,
 		action:"generic /sys/class/misc/wolfson_control/eq_hp_gain_4"
 	}},
 	{ SSeekBar:{
 		title:"Headphone Band 5 gain",
-		min:-12, max:12, unit:"dB",
+		min:0, max:24, unit:"dB",
 		default:`cat /sys/class/misc/wolfson_control/eq_hp_gain_5`,
 		action:"generic /sys/class/misc/wolfson_control/eq_hp_gain_5"
 	}},
