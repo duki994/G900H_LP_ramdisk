@@ -12,6 +12,41 @@ while read FREQ VOLT; do
 		echo 'action:"gpuvolt '${FREQ}'", unit:"mV", weight:0.001, min:500000, max:1150000, step:6250 }}, '
 done < /sys/devices/11800000.mali/volt_table
 `
+	{ SPane:{ title:"GPU frequency control control" }},
+	{ SOptionList:{
+	   title:"GPU max freq",
+	   description:"Set the maximum freqency the GPU scales up to. Stock max is 543Mhz. OC up to 677MHz",
+	   default:`cat /sys/devices/platform/gpusysfs/gpu_max_clock`,
+	   unit:"MHz",
+	   action:"generic /sys/devices/platform/gpusysfs/gpu_max_clock",
+	   values:[
+	      677,
+              600,
+	      543,
+	      480,
+	      420,
+	      350,
+	      266,
+	      177,
+	   ]
+	}},
+	{ SOptionList:{
+	   title:"GPU in freq",
+	   description:"Set the minimum freqency the GPU scales down to. Stock min is 177MHz",
+	   default:`cat /sys/devices/platform/gpusysfs/gpu_min_clock`,
+	   unit:"MHz",
+	   action:"generic /sys/devices/platform/gpusysfs/gpu_min_clock",
+	   values:[
+	      677,
+              600,
+	      543,
+	      480,
+	      420,
+	      350,
+	      266,
+	      177,
+	   ]
+	}},
     ]
 }
 CTAG
