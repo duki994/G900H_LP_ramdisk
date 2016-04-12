@@ -37,10 +37,6 @@ done < /sys/devices/11800000.mali/volt_table
 	   unit:"MHz",
 	   action:"generic /sys/devices/platform/gpusysfs/gpu_min_clock",
 	   values:[
-	      677,
-              600,
-	      543,
-	      480,
 	      420,
 	      350,
 	      266,
