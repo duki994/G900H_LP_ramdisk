@@ -59,6 +59,14 @@ cat << CTAG
 		default:`cat /sys/kernel/charge_control/charge_control_wireless`,
                 action:"generic /sys/kernel/charge_control/charge_control_wireless"
 	}},
+	{ SPane:{ 
+		title:"Reset battery percentage counter",
+		description:"Reset battery percentage counter if it shows wrong percentage or is not calibrated. Wait for some time before battery percentage reading gets stable"
+	}},
+	{ SButton: {
+		label:"Reset battery percentage counter",
+		action:"batteryreset"
+	}},
     ]
 }
 CTAG

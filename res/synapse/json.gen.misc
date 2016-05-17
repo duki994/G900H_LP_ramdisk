@@ -21,13 +21,12 @@ cat << CTAG
 			action:"tools logcat"
 		}},
 		{ SPane:{ 
-			title:"HMP little packing",
-			description:"HMP little packing is update to HMP(Heterogenous Multi Processing) mechanism. HMP is mechanism that allows our SoC to fire all 8 cores at once if needed. Little packing mechanism packs tasks more carefully and puts more tasks on little A7 cores. It's possible that there will be a little performance tradeoff in favour of better battery life. NOTE: This is experimental."
+			title:"Calibrate proximity sensor",
+			description:"Calibrate proximity sensor if it doesn't work good (screen goes/stays on/off during and after calls...). Please reboot your phone after calibration if problem persists."
 		}},
-		{ SCheckBox:{
-		   	description:"HMP little packing switch ON/OFF. Checkbox is right above this text",
-		   	default:`cat /sys/kernel/hmp/packing_enable`,
-		   	action:"generic /sys/kernel/hmp/packing_enable"
+		{ SButton: {
+			label:"Calibrate proximity sensor",
+			action:"proxcal"
 		}}
 `
 PE=\`bool /sys/module/workqueue/parameters/power_efficient\`
